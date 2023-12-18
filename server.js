@@ -86,7 +86,7 @@ app.use((req, res, next) => {
 
 app.use(session({
     store: MongoStore.create({
-        mongoUrl: `mongodb+srv://gaston:TZCAPpxu5qfvdHYA@cluster0.68nenbr.mongodb.net/test?retryWrites=true&w=majority`,
+        mongoUrl: `mongodb+srv://joaquin:lajori848@codercluster.hkzyxhs.mongodb.net/ecommerce?retryWrites=true&w=majority`,
         ttl: 10,
     }),
     secret: '123456',

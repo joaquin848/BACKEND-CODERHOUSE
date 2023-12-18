@@ -1,4 +1,4 @@
-const MessageDAOMongoDB = require(`../daos/MessageDAOMongoDB`);
+const MessageDAOMongoDB = require(`../DAOs/MessageDAOMongoDB.js`);
 const mongoose = require('mongoose');
 
 
