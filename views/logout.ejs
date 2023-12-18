@@ -11,23 +11,24 @@
 </head>
 
 <body>
-        <header>
-            <%- include('./partials/header', {current: `formProductos`}) %>
-        </header>
+    <header>
+        <%- include('./partials/header') %>
+    </header>
 
-        <main>
-            <div class="jumbotron">
-                <main>
-                    <div class="jumbotron">
-                        <h1 class="display-4">Gracias por utilizar la app! <%= userLogout %></h1>
-                    </div>
-                </main>
-            </div>
-        </main>
+    <main>
+        <div class="jumbotron">
+            <main>
+                <div class="jumbotron">
+                    <h1 class="display-4">Gracias por utilizar la app! <%= userLogout %>
+                    </h1>
+                </div>
+            </main>
+        </div>
+    </main>
 
-        <footer>
-            <%- include('./partials/footer') %>
-        </footer>
+    <footer>
+        <%- include('./partials/footer') %>
+    </footer>
 
 </body>
 

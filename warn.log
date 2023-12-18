@@ -1,0 +1,5 @@
+[2023-12-17T21:25:48.015] [WARN] warnArchive - Estado: 404, Ruta consultada: /favicon.ico, Metodo GET
+[2023-12-17T21:34:47.718] [WARN] warnArchive - Estado: 404, Ruta consultada: /favicon.ico, Metodo GET
+[2023-12-17T21:40:58.389] [WARN] warnArchive - Estado: 404, Ruta consultada: /undefined, Metodo GET
+[2023-12-17T21:40:59.276] [WARN] warnArchive - Estado: 404, Ruta consultada: /url, Metodo GET
+[2023-12-17T21:41:00.462] [WARN] warnArchive - Estado: 404, Ruta consultada: /api/formProductos.js, Metodo GET
