@@ -1,13 +1,29 @@
-import express from "express"
-import "./config/db.config.js"
-import authRouter from "./routes/auth.router.js"
+import express from "express";
+import mongoose from "mongoose";
+import cookieParser from "cookie-parser";
 
+import usersRouter from "./routes/users.router.js";
+import petsRouter from "./routes/pets.router.js";
+import adoptionsRouter from "./routes/adoption.router.js";
+import sessionsRouter from "./routes/sessions.router.js";
+import swaggerUi from "swagger-ui-express";
+import { swaggerSetup } from "./utils/swaggerSpecs.js";
+const app = express();
+const PORT = process.env.PORT || 8080;
+mongoose
+  .connect(
+    "mongodb+srv://joaquin:lajori848@codercluster.hkzyxhs.mongodb.net/ecommerce?retryWrites=true&w=majority"
+  )
+  .then(() => console.log("Conectado a la base de datos"))
+  .catch((error) => console.log(error));
 
-const app = express ()
+app.use(express.json());
+app.use(cookieParser());
 
-app.use(express.json())
-app.use(express.urlencoded ({extended:true}))
+app.use("/api/users", usersRouter);
+app.use("/api/pets", petsRouter);
+app.use("/api/adoptions", adoptionsRouter);
+app.use("/api/sessions", sessionsRouter);
+app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerSetup));
 
-app.use("/api/auth", authRouter);
-
-app.listen(8080, () => console.log ("server running on port 8080...."));
+app.listen(PORT, () => console.log(`Listening on ${PORT}`));
